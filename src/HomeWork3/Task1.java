@@ -20,6 +20,7 @@ public class Task1 {
                     System.out.println("Ваша цифра " +
                             ((guess > number) ? "больше" : "меньше") + " загаданной");
                     count++;
+                    
                 }
             }
             System.out.println("Ты " + ((guess == number) ? "Угадал!" : "Проиграл: " + number));
