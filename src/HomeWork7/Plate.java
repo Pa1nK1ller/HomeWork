@@ -4,7 +4,11 @@ public class Plate {
 
     private int food;
 
-    public void addFoot(int food) {
+    public Plate(int food) {
+        this.food = food;
+    }
+
+   public void addFoot(int food) {
         this.food += food;
     }
 
@@ -14,17 +18,16 @@ public class Plate {
 
     @Override
     public String toString() {
-        return "Plate: food = " + food;
+        return "В миске осталось " + food+" еды";
     }
-    public int decreaseFood(int appetiteCount) {
-        if (appetiteCount > food) {
-            appetiteCount -= food;
-            food = 0;
-            System.out.println("Миска пуста");
-            return appetiteCount;
+
+    public void decreaseFood(int appetite, Cat cat) {
+        if (appetite > food) {
+            System.out.println("в миске не хватило еды");
+        } else {
+            food -= appetite;
+            cat.setHungry(false);
         }
-        food -= appetiteCount;
-        return 0;
 
     }
 }
