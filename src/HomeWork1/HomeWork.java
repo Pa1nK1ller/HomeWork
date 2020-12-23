@@ -1,7 +1,6 @@
 package HomeWork1;
 
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public class
 HomeWork {
@@ -52,9 +51,7 @@ HomeWork {
 
     private static void rangeCheck(double check1, double check2) {
 
-        if ((check1 + check2) >= 10 && (check1 + check2) <= 20)
-            System.out.println(true);
-        else System.out.println(false);
+        System.out.println((check1 + check2) >= 10 && (check1 + check2) <= 20);
 
     }
 
@@ -66,9 +63,7 @@ HomeWork {
 
     private static boolean checkNumber2() {
         long number = inputNumber();
-        if (number < 0)
-            return true;
-        else return false;
+        return number < 0;
     }
 
     private static String inputName() {
@@ -81,7 +76,7 @@ HomeWork {
         System.out.println("Введите Год");
         Scanner sc = new Scanner(System.in);
         int year = sc.nextInt();
-        if ((year%4==0  & year%100!=0)||(year%400==0))
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
             System.out.println(year + " Год Високосный");
         else System.out.println(year + " Год не високосный");
     }
